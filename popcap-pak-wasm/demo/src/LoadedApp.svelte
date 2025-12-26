@@ -1,7 +1,5 @@
 <script>
     import DirectoryNode from './DirectoryNode.svelte';
-    import { download } from '@svelteuidev/composables';
-    import { Button } from '@svelteuidev/core';
     export let PopCapPak;
     
     let pakFile = null;
@@ -94,13 +92,7 @@
                 {:else}
                     Unknown File Type
                 {/if}
-            <Button 
-    variant='outline'
-    use={[[download, { blob: fileData, filename: "test" }]]}
-    on:usedownload={() => console.log('File Downloaded')}
->
-    Download File
-</Button>
+            
             {/if}
         </div>
     </div>
