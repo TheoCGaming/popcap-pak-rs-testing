@@ -1,5 +1,7 @@
 <script>
     import DirectoryNode from './DirectoryNode.svelte';
+    import { download } from '@svelteuidev/composables';
+    import { Button } from '@svelteuidev/core';
     export let PopCapPak;
     
     let pakFile = null;
