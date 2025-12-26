@@ -92,6 +92,13 @@
                 {:else}
                     Unknown File Type
                 {/if}
+            <Button 
+    variant='outline'
+    use={[[download, { blob: fileData, filename: "test" }]]}
+    on:usedownload={() => console.log('File Downloaded')}
+>
+    Download File
+</Button>
             {/if}
         </div>
     </div>
